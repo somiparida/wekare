@@ -1,9 +1,0 @@
-.calendar-holder {
-    width: 500px;
-    z-index: 9999999;
-  }
-  .calendar-date-out {
-    pointer-events: none;
-    cursor: default;
-    opacity: 0.6;
-  }
