@@ -4,6 +4,9 @@
   "description": "A Vue.js project",
   "author": "Soumyalagna Parida <soumyalagna.parida@techwave.net>",
   "private": true,
+  "engines": {
+    "node": "6.11.1"
+  },
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
@@ -50,7 +53,7 @@
     "jest": "^21.2.0",
     "jest-serializer-vue": "^0.3.0",
     "vue-jest": "^1.0.2",
-    "node-notifier": "^5.1.2",
+    "node-notifier": "^6.11.1",
     "chromedriver": "^2.27.2",
     "cross-spawn": "^5.0.1",
     "nightwatch": "^0.9.12",
