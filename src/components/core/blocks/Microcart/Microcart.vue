@@ -1,0 +1,52 @@
+<template>
+  <div class="microcart" :class="{ active: isOpen }">
+    Core Microcart
+    <!-- Items in cart displayed as a list with quantitys for each item -->
+    <ul>
+      <li v-for='product in items'>
+        {{ product.name }}
+        {{ product.price }}
+        {{ product.quantity }}
+      </li>
+    </ul>  
+  </div>
+</template>
+
+<script>
+import { mapActions, mapState } from 'vuex'
+
+export default {
+  name: 'microcart',
+  props: ['product'],
+  created () {
+    this.$store.dispatch('cart/load') // load cart from the indexedDb
+  },
+  methods: {
+    closeMicrocart () {
+      this.$store.commit('ui/setMicrocart', false)
+    },
+    ...mapActions({ 'removeFromCart': 'cart/removeItem' })
+  },
+  computed: {
+    shipping () {
+      return this.$store.state.cart.shipping
+    },
+    payment () {
+      return this.$store.state.cart.payment
+    },
+    subtotal () {
+      return this.$store.getters['cart/totals'].subtotal
+    },
+    total () {
+      return this.subtotal + this.shipping.cost + this.payment.cost
+    },
+    items () {
+      return this.$store.state.cart.cartItems
+    },
+    ...mapState({
+      isOpen: state => state.ui.microcart
+    })
+  }
+}
+</script>
+
