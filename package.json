@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "myhouse",
   "author": "Soumyalagna Parida <soumyalagna.parida@techwave.net>",
+  "engines" : { "node" : "9.2.0" },
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
