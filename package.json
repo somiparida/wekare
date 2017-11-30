@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "myhouse",
   "author": "Soumyalagna Parida <soumyalagna.parida@techwave.net>",
-  "engines" : { "node" : "9.2.0" },
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
@@ -76,8 +75,7 @@
     "webpack-merge": "^4.1.0"
   },
   "engines": {
-    "node": ">= 4.0.0",
-    "npm": ">= 3.0.0"
+    "node": "9.2.0"
   },
   "browserslist": [
     "> 1%",
