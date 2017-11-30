@@ -1,9 +1,0 @@
-.DS_Store
-node_modules/
-dist/
-npm-debug.log
-.vscode/
-.idea/
-yarn.lock
-src/config.js
-package-lock.json
