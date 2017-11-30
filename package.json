@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Vue.js Onsen UI bindings navigator example",
   "author": "Andreas Argelius <andreas@argeli.us>",
+  "engines": {
+    "node": "9.2.0"
+  },
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
